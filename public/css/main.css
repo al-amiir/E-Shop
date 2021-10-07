@@ -32,13 +32,83 @@ code {
   font-size: 1.3rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 .button_navigation {
   background-color: transparent;
   margin: 0 10px 0 10px;
   border: none;
-  cursor: pointer;
   font-size: 0.8rem;
   font-weight: bold;
+}
+.button_menu-collapse {
+  font-size: 1rem;
+  padding: 0;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sidebar {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.sidebar_header {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar_box {
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dedada;
+  width: 200px;
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 10px;
+}
+.sidebar_box-size {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6px;
+}
+.sidebar_box-size input {
+  background-color: transparent;
+  border: 1px solid #dedada;
+  font-size: 0.7rem;
+  height: 31px;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+.sidebar_box-color {
+  display: flex;
+}
+.sidebar_box-color div {
+  border: 1px solid #dedada;
+  padding: 5px;
+}
+.sidebar_box-color div input {
+  border: 1px solid #dedada;
+  width: 20px;
+  color: transparent;
+}
+.sidebar_product label input {
+  transform: scale(1.2);
+  margin: 7px 0px;
+}
+.sidebar_product label span {
+  margin-left: 10px;
+}
+.sidebar_range-text {
+  margin: 7px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

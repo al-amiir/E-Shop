@@ -1,0 +1,64 @@
+.sidebar {
+  margin-left: 50px;
+  margin-top: 50px;
+  &_header {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_box {
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dedada;
+    width: 200px;
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 10px;
+    &-size {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 6px;
+      input {
+        background-color: transparent;
+        border: 1px solid #dedada;
+        font-size: 0.7rem;
+        height: 31px;
+        color: #3a3a3a;
+        cursor: pointer;
+      }
+    }
+    &-color {
+      display: flex;
+      div {
+        border: 1px solid #dedada;
+        padding: 5px;
+        input {
+          border: 1px solid #dedada;
+          width: 20px;
+          color: transparent;
+        }
+      }
+    }
+  }
+  &_product {
+    & label {
+      input {
+        transform: scale(1.2);
+        margin: 7px 0px;
+      }
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  &_range {
+    &-text {
+      margin: 7px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
