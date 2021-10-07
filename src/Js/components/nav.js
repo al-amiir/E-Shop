@@ -8,19 +8,27 @@ export default class Navigation extends React.Component {
     return (
       <>
         <div className="nav">
-          <div>
-            <span>logo</span>
-            <span>E shop</span>
+          <div className="logo">
+            <span className="material-icons">article</span>
+            <span className="logo_name">
+              <font color="orange">E</font> shop
+            </span>
           </div>
-          <div>
-            <button>Men</button>
-            <button>Women</button>
-            <button>Kids</button>
+          <div className="button_container">
+            <button className="button_navigation">Men</button>
+            <button className="button_navigation">Women</button>
+            <button className="button_navigation">Kids</button>
           </div>
-          <div>
-            <button>search</button>
-            <button>cart</button>
-            <button>user</button>
+          <div className="button_container">
+            <button className="button_navigation">
+              <span className="material-icons">search</span>
+            </button>
+            <button className="button_navigation">
+              <span className="material-icons">shopping_cart</span>
+            </button>
+            <button className="button_navigation">
+              <span className="material-icons">perm_identity</span>
+            </button>
           </div>
         </div>
       </>

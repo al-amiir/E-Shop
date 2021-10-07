@@ -4,4 +4,20 @@
   align-items: center;
   border-bottom: 1px solid #dedada;
   height: 80px;
+  padding: 0 50px 0 50px;
+}
+.logo {
+  &_name {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-size: 1.3rem;
+  }
 }

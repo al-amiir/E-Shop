@@ -1,0 +1,10 @@
+.button {
+  &_navigation {
+    background-color: transparent;
+    margin: 0 10px 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}

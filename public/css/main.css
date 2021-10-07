@@ -15,6 +15,30 @@ code {
   align-items: center;
   border-bottom: 1px solid #dedada;
   height: 80px;
+  padding: 0 50px 0 50px;
+}
+
+.logo_name {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_container span {
+  font-size: 1.3rem;
+}
+
+.button_navigation {
+  background-color: transparent;
+  margin: 0 10px 0 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
