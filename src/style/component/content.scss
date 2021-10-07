@@ -1,0 +1,90 @@
+.maincontent {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 24px;
+  margin-right: 80px;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 1rem;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-weight: 100;
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      form {
+        font-size: 0.7rem;
+        font-weight: 700;
+        margin-right: 20px;
+        select {
+          border: 1px solid #dedada;
+          background-color: transparent;
+          border-radius: 21px;
+          height: 35px;
+          padding: 8px;
+          text-align: center;
+          font-size: 0.7rem;
+          margin-left: 10px;
+          outline: none;
+        }
+      }
+    }
+  }
+  &_content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, min-content);
+    grid-gap: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, min-content);
+    }
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, min-content);
+    }
+    .card {
+      position: relative;
+    }
+    .button_love {
+      position: absolute;
+      top: 11px;
+      right: 15px;
+      background-color: #ffffff94;
+      border: none;
+      border-radius: 20px;
+      width: 25px;
+      height: 25px;
+      backdrop-filter: blur(5px);
+      padding: 5px;
+      span {
+        font-size: 1rem;
+      }
+    }
+    div {
+      font-size: 0.7rem;
+      img {
+        width: 200px;
+        height: 200px;
+        background-color: orangered;
+        @include respond(tab-land) {
+          width: 170px;
+          height: 170px;
+        }
+        @include respond(tab-port) {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
