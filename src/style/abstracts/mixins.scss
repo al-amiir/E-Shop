@@ -33,6 +33,16 @@ $breakpoint arguement choices:
       @content;
     } //600px
   }
+  @if $breakpoint == large-phone {
+    @media only screen and (max-width: 48em) {
+      @content;
+    } //760px
+  }
+  @if $breakpoint == xlarge-phone {
+    @media only screen and (max-width: 50em) {
+      @content;
+    } //800px
+  }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       @content;

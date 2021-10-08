@@ -41,19 +41,19 @@ export default class Footer extends React.Component {
               </p>
               <div className="footer_bottom-icons">
                 <button>
-                  <i class="fa fa-facebook"></i>
+                  <i className="fa fa-facebook"></i>
                 </button>
                 <button>
-                  <i class="fa fa-twitter"></i>
+                  <i className="fa fa-twitter"></i>
                 </button>
                 <button>
-                  <i class="fa fa-linkedin"></i>
+                  <i className="fa fa-linkedin"></i>
                 </button>
                 <button>
-                  <i class="fa fa-instagram"></i>
+                  <i className="fa fa-instagram"></i>
                 </button>
                 <button>
-                  <i class="fa fa-youtube"></i>
+                  <i className="fa fa-youtube"></i>
                 </button>
               </div>
             </div>

@@ -1,6 +1,9 @@
 .sidebar {
   margin-left: 50px;
   margin-top: 50px;
+  @include respond(large-phone) {
+    display: none;
+  }
   &_header {
     font-weight: 700;
     display: flex;

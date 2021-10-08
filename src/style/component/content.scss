@@ -7,6 +7,9 @@
   &_header {
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
     span {
       font-size: 1rem;
       font-weight: 300;
@@ -52,6 +55,12 @@
     @include respond(tab-port) {
       grid-template-columns: repeat(2, min-content);
     }
+    @include respond(large-phone) {
+      grid-template-columns: repeat(3, min-content);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(2, min-content);
+    }
     .card {
       position: relative;
     }
@@ -83,6 +92,17 @@
         @include respond(tab-port) {
           width: 200px;
           height: 200px;
+        }
+        @include respond(large-phone) {
+          width: 160px;
+          height: 160px;
+        }
+        @include respond(phone) {
+          width: 200px;
+          height: 200px;
+        }
+        @include respond(meduim-phone) {
+          width: 150px;
         }
       }
     }

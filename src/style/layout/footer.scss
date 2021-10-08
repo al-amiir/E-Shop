@@ -57,7 +57,9 @@
     &-left {
       width: 400px;
       margin-bottom: 30px;
-
+      @include respond(phone) {
+        width: 250px;
+      }
       p {
         font-size: 0.7rem;
         color: grey;

@@ -132,6 +132,11 @@ $breakpoint arguement choices:
   width: 400px;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer_bottom-left {
+    width: 250px;
+  }
+}
 .footer_bottom-left p {
   font-size: 0.7rem;
   color: grey;
@@ -211,6 +216,11 @@ button {
   margin-left: 50px;
   margin-top: 50px;
 }
+@media only screen and (max-width: 48em) {
+  .sidebar {
+    display: none;
+  }
+}
 .sidebar_header {
   font-weight: 700;
   display: flex;
@@ -280,6 +290,11 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 56.25em) {
+  .maincontent_header {
+    flex-direction: column;
+  }
+}
 .maincontent_header span {
   font-size: 1rem;
   font-weight: 300;
@@ -328,6 +343,16 @@ button {
     grid-template-columns: repeat(2, min-content);
   }
 }
+@media only screen and (max-width: 48em) {
+  .maincontent_content {
+    grid-template-columns: repeat(3, min-content);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .maincontent_content {
+    grid-template-columns: repeat(2, min-content);
+  }
+}
 .maincontent_content .card {
   position: relative;
 }
@@ -364,6 +389,23 @@ button {
   .maincontent_content div img {
     width: 200px;
     height: 200px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .maincontent_content div img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .maincontent_content div img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .maincontent_content div img {
+    width: 150px;
   }
 }
 
