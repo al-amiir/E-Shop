@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Description from "./description";
+import ProductsLine from "./productsLine";
 import MyGallery from "./gallery";
 export default class SingleProduct extends React.Component {
   constructor(props) {
@@ -101,6 +102,7 @@ export default class SingleProduct extends React.Component {
         <div>
           <Description />
         </div>
+        <ProductsLine />
       </>
     );
   }

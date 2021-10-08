@@ -45,4 +45,12 @@ button {
     border-radius: 30px;
     margin: 0 10px;
   }
+  &_showmore {
+    border: 1px solid lightgrey;
+    width: 120px;
+    padding: 9px;
+    border-radius: 28px;
+    color: black;
+    font-weight: 800;
+  }
 }

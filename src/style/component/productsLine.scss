@@ -1,0 +1,16 @@
+.productsline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  & > * {
+    margin: 30px 0px;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-around;
+  }
+  &_content {
+    display: flex;
+    justify-content: space-around;
+  }
+}
