@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navigation from "../components/nav";
+import Header from "../components/header";
 import SideBar from "../components/side-bar";
 import MainContent from "../components/main-content ";
 export class Home extends React.Component {
@@ -9,7 +9,7 @@ export class Home extends React.Component {
   render() {
     return (
       <>
-        <Navigation />
+        <Header />
         <div style={{ display: "flex" }}>
           <SideBar />
           <MainContent />

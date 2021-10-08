@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default class Navigation extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
   }
