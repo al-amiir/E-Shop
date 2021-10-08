@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Description from "./description";
 import MyGallery from "./gallery";
 export default class SingleProduct extends React.Component {
   constructor(props) {
@@ -90,6 +91,15 @@ export default class SingleProduct extends React.Component {
               </button>
             </div>
           </div>
+        </div>
+        <div className="description-reviews">
+          <button>Description</button>
+          <button style={{ color: "lightgray", borderColor: "lightgray" }}>
+            Reviews
+          </button>
+        </div>
+        <div>
+          <Description />
         </div>
       </>
     );

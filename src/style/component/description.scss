@@ -1,0 +1,26 @@
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  div {
+    width: 300px;
+    text-align: center;
+    & > * {
+      margin: 20px 0px;
+    }
+    span {
+      color: lightgrey;
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 0.7rem;
+      font-weight: 300;
+    }
+  }
+}

@@ -972,6 +972,21 @@ button {
   justify-content: start;
 }
 
+.description-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description-reviews button {
+  margin: 50px 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid orange;
+  border-radius: 17px;
+  width: 118px;
+  font-weight: bold;
+}
+
 .breadcrumb {
   padding: 20px 0px;
   list-style: none;
@@ -992,6 +1007,35 @@ button {
 .breadcrumb li a:hover {
   color: #b1b1b1;
   text-decoration: underline;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .description {
+    flex-direction: column;
+  }
+}
+.description div {
+  width: 300px;
+  text-align: center;
+}
+.description div > * {
+  margin: 20px 0px;
+}
+.description div span {
+  color: lightgrey;
+  font-size: 3rem;
+}
+.description div h3 {
+  font-size: 0.9rem;
+}
+.description div p {
+  font-size: 0.7rem;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

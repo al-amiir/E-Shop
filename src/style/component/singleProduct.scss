@@ -110,3 +110,17 @@
     justify-content: start;
   }
 }
+.description-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    margin: 50px 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 17px;
+    width: 118px;
+    font-weight: bold;
+  }
+}
