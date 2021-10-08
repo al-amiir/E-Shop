@@ -69,6 +69,12 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+.button_pagination {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 0.8rem;
+}
 
 .sidebar {
   margin-left: 50px;
@@ -224,6 +230,26 @@ button {
     width: 200px;
     height: 200px;
   }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination > * {
+  font-size: 0.6rem;
+  margin: 5px;
+  font-weight: 700;
+}
+.pagination_number {
+  border: 1px solid #dedada;
+  background-color: transparent;
+}
+.pagination_prev {
+  color: #dedada;
+  border-color: #dedada;
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=main.css.map */

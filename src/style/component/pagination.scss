@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    font-size: 0.6rem;
+    margin: 5px;
+    font-weight: 700;
+  }
+  &_number {
+    border: 1px solid #dedada;
+    background-color: transparent;
+  }
+  &_prev {
+    color: #dedada;
+    border-color: #dedada;
+    cursor: not-allowed;
+  }
+}

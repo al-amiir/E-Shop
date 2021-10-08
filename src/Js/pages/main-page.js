@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "../components/nav";
-
+import SideBar from "../components/side-bar";
+import MainContent from "../components/main-content ";
 export class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -9,6 +10,10 @@ export class Home extends React.Component {
     return (
       <>
         <Navigation />
+        <div style={{ display: "flex" }}>
+          <SideBar />
+          <MainContent />
+        </div>
       </>
     );
   }

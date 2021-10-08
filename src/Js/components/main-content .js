@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./card";
+import Pagination from "./pagination";
 export default class MainContent extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +50,7 @@ export default class MainContent extends React.Component {
             <Card />
             <Card />
           </div>
+          <Pagination />
         </div>
       </>
     );

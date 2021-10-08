@@ -9,10 +9,6 @@ import { Home } from "./Js/pages/main-page";
 ReactDOM.render(
   <>
     <Home />
-    <div style={{ display: "flex" }}>
-      <SideBar />
-      <MainContent />
-    </div>
   </>,
   document.getElementById("root")
 );

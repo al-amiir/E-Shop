@@ -17,4 +17,10 @@ button {
     background-color: transparent;
     cursor: pointer;
   }
+  &_pagination {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 0.8rem;
+  }
 }
