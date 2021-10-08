@@ -1,0 +1,107 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0px;
+
+  &_input {
+    &-email {
+      height: 30px;
+      padding: 7px;
+      padding-left: 18px;
+      border-radius: 14px;
+      border: none;
+      outline: none;
+    }
+    &-subscribe {
+      color: black;
+      font-weight: 700;
+      background-color: #ffa638;
+      padding: 11px;
+      border: none;
+      border-radius: 15px;
+      margin: 8px;
+    }
+  }
+  &_top {
+    background-image: url("https://via.placeholder.com/600X400");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    p {
+      font-size: 1.4rem;
+      color: white;
+      padding: 6px;
+    }
+    & > * {
+      margin: 30px 20px;
+    }
+  }
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 40px 0px;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &-left {
+      width: 400px;
+      margin-bottom: 30px;
+
+      p {
+        font-size: 0.7rem;
+        color: grey;
+        margin-top: 13px;
+      }
+    }
+    &-icons {
+      margin-top: 40px;
+      button {
+        margin-right: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #b1afaf;
+        font-size: 1rem;
+      }
+    }
+    &-right {
+      display: flex;
+      @include respond(meduim-phone) {
+        flex-direction: column;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        @include respond(meduim-phone) {
+          margin-left: 0px;
+          margin-bottom: 30px;
+        }
+        h3 {
+          font-size: 0.8rem;
+          margin-bottom: 20px;
+        }
+        a {
+          font-size: 0.7rem;
+          color: black;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  &_rights {
+    font-size: 0.5rem;
+    color: grey;
+  }
+}

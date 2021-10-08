@@ -11,10 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@import "./base/base.scss";
 
 @import "./abstracts/mixins.scss";
 
 @import "./layout/header.scss";
+@import "./layout/footer.scss";
 
 @import "./component/buttons.scss";
 @import "./component/sideBar.scss";

@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #dedada;
-    width: 200px;
+    width: 240px;
     padding: 10px 10px 10px 30px;
     margin-bottom: 10px;
     &-size {
@@ -26,6 +26,7 @@
         height: 31px;
         color: #3a3a3a;
         cursor: pointer;
+        padding: 9px;
       }
     }
     &-color {
@@ -59,6 +60,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    input {
+      height: 3px;
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/header";
 import SideBar from "../components/side-bar";
 import MainContent from "../components/main-content ";
+import Footer from "../components/footer";
 export class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,7 @@ export class Home extends React.Component {
           <SideBar />
           <MainContent />
         </div>
+        <Footer />
       </>
     );
   }
