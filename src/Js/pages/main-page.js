@@ -3,6 +3,7 @@ import Header from "../components/header";
 import SideBar from "../components/side-bar";
 import MainContent from "../components/main-content ";
 import Footer from "../components/footer";
+import SingleProduct from "../components/singleProduct";
 export class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -11,10 +12,11 @@ export class Home extends React.Component {
     return (
       <>
         <Header />
-        <div style={{ display: "flex" }}>
+        {/* <div style={{ display: "flex" }}>
           <SideBar />
           <MainContent />
-        </div>
+        </div> */}
+        <SingleProduct />
         <Footer />
       </>
     );

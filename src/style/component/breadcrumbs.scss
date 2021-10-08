@@ -1,0 +1,21 @@
+.breadcrumb {
+  padding: 20px 0px;
+  list-style: none;
+  li {
+    display: inline;
+    font-size: 0.6rem;
+    &:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0";
+    }
+    a {
+      color: #b1b1b1;
+      text-decoration: none;
+      &:hover {
+        color: #b1b1b1;
+        text-decoration: underline;
+      }
+    }
+  }
+}

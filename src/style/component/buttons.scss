@@ -1,5 +1,7 @@
 button {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 .button {
   &_navigation {
@@ -22,5 +24,25 @@ button {
     border: none;
     border-bottom: 1px solid black;
     font-size: 0.8rem;
+  }
+  &_love {
+    background-color: #ffffff94;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 26px;
+    height: 25px;
+    backdrop-filter: blur(5px);
+    padding: 4px;
+    span {
+      font-size: 1rem;
+    }
+  }
+  &_addToCart {
+    background-color: orange;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin: 0 10px;
   }
 }

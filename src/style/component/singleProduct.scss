@@ -1,0 +1,112 @@
+.singleproduct {
+  display: flex;
+  justify-content: center;
+  margin: 20px 40px;
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+  }
+  .delivery {
+    display: flex;
+    @include respond(tab-port) {
+      display: none;
+    }
+    &-car {
+      display: flex;
+      justify-content: center;
+      background-color: #ececec;
+      padding: 10px 20px;
+
+      .material-icons {
+        margin-right: 18px;
+        font-size: 1.2rem;
+      }
+      &-1 {
+      }
+    }
+  }
+  &_gallery {
+    width: 600px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-port) {
+      width: auto;
+      margin-right: 0px;
+    }
+    .breadcrumb {
+      margin-bottom: 57px;
+      @include respond(phone) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &_details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    @include respond(tab-port) {
+      margin-left: 0px;
+    }
+    & > * {
+      margin: 10px 0px;
+    }
+    p {
+      font-size: 0.7rem;
+      color: grey;
+      margin-bottom: 10px;
+    }
+    .sale {
+      float: left;
+      color: white;
+      background-color: red;
+      padding: 5px;
+      border-radius: 24px;
+      font-size: 0.7rem;
+      width: 41px;
+      text-align: center;
+    }
+    .id {
+      float: right;
+      color: #cccccc;
+    }
+    .name {
+      font-size: 2rem;
+      font-weight: 200;
+    }
+    .price {
+      font-size: 1.5rem;
+      &_now {
+        color: red;
+        margin-right: 30px;
+      }
+      &_before {
+        text-decoration: line-through;
+        color: lightgrey;
+      }
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      div {
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 26px;
+      }
+    }
+  }
+  .sidebar_box-size {
+    justify-content: start;
+  }
+}
