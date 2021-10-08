@@ -353,10 +353,12 @@ button {
     grid-template-columns: repeat(2, min-content);
   }
 }
-.maincontent_content .card {
+
+.card {
   position: relative;
+  font-size: 0.7rem;
 }
-.maincontent_content .button_love {
+.card .button_love {
   position: absolute;
   top: 11px;
   right: 15px;
@@ -368,43 +370,40 @@ button {
   backdrop-filter: blur(5px);
   padding: 5px;
 }
-.maincontent_content .button_love span {
+.card .button_love span {
   font-size: 1rem;
 }
-.maincontent_content div {
-  font-size: 0.7rem;
-}
-.maincontent_content div img {
+.card img {
   width: 200px;
   height: 200px;
   background-color: orangered;
 }
 @media only screen and (max-width: 75em) {
-  .maincontent_content div img {
+  .card img {
     width: 170px;
     height: 170px;
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .maincontent_content div img {
+  .card img {
     width: 200px;
     height: 200px;
   }
 }
 @media only screen and (max-width: 48em) {
-  .maincontent_content div img {
+  .card img {
     width: 160px;
     height: 160px;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .maincontent_content div img {
+  .card img {
     width: 200px;
     height: 200px;
   }
 }
 @media only screen and (max-width: 28em) {
-  .maincontent_content div img {
+  .card img {
     width: 150px;
   }
 }

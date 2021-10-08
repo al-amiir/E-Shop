@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  font-size: 0.7rem;
+  .button_love {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    background-color: #ffffff94;
+    border: none;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    span {
+      font-size: 1rem;
+    }
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    @include respond(tab-land) {
+      width: 170px;
+      height: 170px;
+    }
+    @include respond(tab-port) {
+      width: 200px;
+      height: 200px;
+    }
+    @include respond(large-phone) {
+      width: 160px;
+      height: 160px;
+    }
+    @include respond(phone) {
+      width: 200px;
+      height: 200px;
+    }
+    @include respond(meduim-phone) {
+      width: 150px;
+    }
+  }
+}
