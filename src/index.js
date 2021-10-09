@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SideBar from "./Js/components/side-bar";
-import MainContent from "./Js/components/main-content ";
-
-// import './index.css';
 import { Home } from "./Js/pages/main-page";
+import store from "./app/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <>
-    <Home />
+    <Provider store={store}>
+      <Home />
+    </Provider>
   </>,
   document.getElementById("root")
 );
