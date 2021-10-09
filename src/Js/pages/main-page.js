@@ -12,11 +12,11 @@ export class Home extends React.Component {
     return (
       <>
         <Header />
-        {/* <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }}>
           <SideBar />
           <MainContent />
-        </div> */}
-        <SingleProduct />
+        </div>
+        {/* <SingleProduct /> */}
         <Footer />
       </>
     );
