@@ -5,7 +5,7 @@ Electronic Shop
 Run the following commends 
 
 ```
-npm init 
+npm install 
 npm run start 
 
 ```
