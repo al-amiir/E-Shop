@@ -4,6 +4,7 @@ import Card from "./card";
 import Pagination from "./pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { sort } from "../../features/filter/filterSlice";
+
 export default function MainContent(props) {
   const [sortValue, setSortValue] = useState("-select-");
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function MainContent(props) {
     dispatch(sort(sortValue));
   }
   let products = useSelector((state) => state.filter.dataArray);
+  console.log(products);
   return (
     <>
       <div className="maincontent">

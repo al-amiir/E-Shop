@@ -10,6 +10,16 @@ export class Home extends React.Component {
     return (
       <>
         <Header />
+        <div style={{ marginLeft: "3rem" }}>
+          <ul className="breadcrumb">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">All products</a>
+            </li>
+          </ul>
+        </div>
         <div style={{ display: "flex" }}>
           <SideBar />
           <MainContent />

@@ -50,8 +50,8 @@ export function filterDataFunc(clientSearch, data) {
     }
     // 9- if filterCheck had true value, push this item to filteredArray
     if (filterCheck) filteredArray.push(item);
-    return filteredArray;
   });
+  return filteredArray;
 }
 
 /**

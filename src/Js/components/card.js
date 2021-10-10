@@ -8,7 +8,7 @@ export default function Card(props) {
         <button className="button_love">
           <span className="material-icons">favorite_border</span>
         </button>
-        <img src={data.thumbnail[1]} />
+        <img alt={data.title} src={data.thumbnail[1]} />
         <p>{data.title}</p>
 
         {data.sale ? (

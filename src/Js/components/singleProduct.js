@@ -74,7 +74,7 @@ export default class SingleProduct extends React.Component {
             <div className="price">
               {this.state.product.sale ? (
                 <>
-                  <font color="red">{this.state.product.sale}</font>
+                  <font color="red">${this.state.product.sale}</font>
                   <font
                     color="lightgrey"
                     style={{
@@ -82,11 +82,11 @@ export default class SingleProduct extends React.Component {
                       marginLeft: "10px",
                     }}
                   >
-                    {this.state.product.price}
+                    ${this.state.product.price}
                   </font>
                 </>
               ) : (
-                <font color="black">{this.state.product.price}</font>
+                <font color="black">${this.state.product.price}</font>
               )}
             </div>
             <div className="color">
@@ -94,12 +94,11 @@ export default class SingleProduct extends React.Component {
               <div className="sidebar_box-color">
                 {this.state.product.color.map((color, i) => {
                   return (
-                    <div>
+                    <div key={i}>
                       <input
                         style={{ backgroundColor: color }}
                         type="button"
                         value={color}
-                        key={i}
                       />
                     </div>
                   );
