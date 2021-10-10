@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import TEST_DATA from "../../TEST_DATA";
 import Card from "./card";
 export default class ProductsLine extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="productsline">
@@ -15,9 +14,11 @@ export default class ProductsLine extends React.Component {
           <button>
             <span className="material-icons">arrow_back</span>
           </button>
-          <Card />
-          <Card />
-          <Card />
+          {TEST_DATA.slice(0, 3).map((p) => (
+            <Link to={`${p.id}`} key={p.id}>
+              <Card data={p} key={p.id} />
+            </Link>
+          ))}
           <button>
             <span className="material-icons">arrow_forward</span>
           </button>

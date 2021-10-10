@@ -1,21 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import Description from "./description";
 import ProductsLine from "./productsLine";
 import MyGallery from "./gallery";
+import TEST_DATE from "../../TEST_DATA";
+import { Link } from "react-router-dom";
+import Footer from "./footer";
 export default class SingleProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sizes: ["XS", "S", "M", "L", "xL", "XXL"],
       color: ["black", "brown", "wheat", "grey", "white", "blue"],
+      product: null,
     };
   }
+  componentDidMount() {
+    const { id } = this.props.match.params;
+    const [product] = TEST_DATE.filter((p) => p.id == id);
+    this.setState({ product });
+  }
+
   render() {
+    if (!this.state.product) {
+      return (
+        <div className="error">
+          <p>404</p>
+          <Link to="/">Home</Link>
+        </div>
+      );
+    }
+
     return (
       <>
         <div className="singleproduct">
           <div className="singleproduct_gallery">
-            <ul class="breadcrumb">
+            <ul className="breadcrumb">
               <li>
                 <a href="#">Home</a>
               </li>
@@ -25,9 +44,9 @@ export default class SingleProduct extends React.Component {
               <li>
                 <a href="#">T-Shirt</a>
               </li>
-              <li>T-Shirt Summer Vibes</li>
+              <li>{this.state.product.title}</li>
             </ul>
-            <MyGallery />
+            <MyGallery data={this.state.product} />
           </div>
           <div className="singleproduct_details">
             <div className="delivery">
@@ -47,24 +66,40 @@ export default class SingleProduct extends React.Component {
               </div>
             </div>
             <div>
-              <p className="sale">SALE</p>
-              <p className="id">Product ID</p>
+              {this.state.product.sale ? <p className="sale">SALE</p> : ""}
+
+              <p className="id">Product ID {this.state.product.id}</p>
             </div>
-            <h2 className="name">T-Shirt</h2>
+            <h2 className="name">{this.state.product.title}</h2>
             <div className="price">
-              <span className="price_now">$45</span>
-              <span className="price_before">$55</span>
+              {this.state.product.sale ? (
+                <>
+                  <font color="red">{this.state.product.sale}</font>
+                  <font
+                    color="lightgrey"
+                    style={{
+                      textDecoration: "line-through",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    {this.state.product.price}
+                  </font>
+                </>
+              ) : (
+                <font color="black">{this.state.product.price}</font>
+              )}
             </div>
             <div className="color">
               <p>Color:</p>
               <div className="sidebar_box-color">
-                {this.state.color.map((color) => {
+                {this.state.product.color.map((color, i) => {
                   return (
                     <div>
                       <input
                         style={{ backgroundColor: color }}
                         type="button"
                         value={color}
+                        key={i}
                       />
                     </div>
                   );
@@ -74,8 +109,8 @@ export default class SingleProduct extends React.Component {
             <div>
               <p>Size</p>
               <div className="sidebar_box-size">
-                {this.state.sizes.map((size) => {
-                  return <input type="button" value={size} />;
+                {this.state.product.size.map((size, i) => {
+                  return <input type="button" key={i} value={size} />;
                 })}
               </div>
             </div>
@@ -103,6 +138,7 @@ export default class SingleProduct extends React.Component {
           <Description />
         </div>
         <ProductsLine />
+        <Footer />
       </>
     );
   }

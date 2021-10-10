@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <>
-        <div className="card">
-          <img />
-          <button className="button_love">
-            <span className="material-icons">favorite_border</span>
-          </button>
-          <p>lorem lorem lorem</p>
-          <p>price</p>
-        </div>
-      </>
-    );
-  }
+export default function Card(props) {
+  let data = props.data;
+  return (
+    <>
+      <div className="card">
+        <button className="button_love">
+          <span className="material-icons">favorite_border</span>
+        </button>
+        <img src={data.thumbnail[1]} />
+        <p>{data.title}</p>
+
+        {data.sale ? (
+          <>
+            <font className="sale">{data.sale}</font>
+            <font color="lightgrey">{data.price}</font>
+          </>
+        ) : (
+          <font color="black">{data.price}</font>
+        )}
+      </div>
+    </>
+  );
 }

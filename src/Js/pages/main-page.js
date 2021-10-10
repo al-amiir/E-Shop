@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+
 import Header from "../components/header";
 import SideBar from "../components/side-bar";
 import MainContent from "../components/main-content ";
 import Footer from "../components/footer";
-import SingleProduct from "../components/singleProduct";
+
 export class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>
@@ -16,7 +14,6 @@ export class Home extends React.Component {
           <SideBar />
           <MainContent />
         </div>
-        {/* <SingleProduct /> */}
         <Footer />
       </>
     );

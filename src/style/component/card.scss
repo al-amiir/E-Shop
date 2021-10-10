@@ -9,11 +9,16 @@
   img {
     width: 200px;
     height: 200px;
-    background-color: orangered;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+      box-shadow: 0px 4px 10px black;
+    }
     @include respond(tab-land) {
       width: 170px;
       height: 170px;
     }
+
     @include respond(tab-port) {
       width: 200px;
       height: 200px;
@@ -29,5 +34,18 @@
     @include respond(meduim-phone) {
       width: 150px;
     }
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin: 7px 0px;
+  }
+  .sale {
+    color: red;
+    margin-right: 7px;
+  }
+  font {
+    font-size: 1rem;
   }
 }

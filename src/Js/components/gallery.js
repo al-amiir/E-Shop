@@ -1,27 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ImageGallery from "react-image-gallery";
-
-const images = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-];
-
 export default class MyGallery extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: this.props.data.thumbnail.map((img) => {
+        return {
+          original: `${this.props.data.img}`,
+          thumbnail: `${img}`,
+        };
+      }),
+    };
+  }
   render() {
     return (
       <ImageGallery
-        items={images}
+        items={this.state.images}
         thumbnailPosition={"bottom"}
         showPlayButton={false}
         showNav={false}
