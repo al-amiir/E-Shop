@@ -15,7 +15,7 @@ export default function SideBar(props) {
     },
     sizeNeedsByClient: [],
 
-    color: ["black", "brown", "wheat", "grey", "white", "blue"],
+    color: ["black", "red", "wheat", "grey", "white", "blue"],
     colorChecked: {
       black: false,
       brown: false,

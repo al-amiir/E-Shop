@@ -1,4 +1,7 @@
 .breadcrumb {
+  @include respond(large-phone) {
+    display: none;
+  }
   padding: 20px 0px;
   list-style: none;
   li {

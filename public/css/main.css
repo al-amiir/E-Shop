@@ -439,6 +439,7 @@ body {
   padding: 16px;
   color: white;
   text-align: center;
+  width: 225px;
 }
 
 /*
@@ -477,6 +478,11 @@ $breakpoint arguement choices:
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .button_container-kinds {
+    display: none;
+  }
 }
 .button_container span {
   font-size: 1.3rem;
@@ -611,6 +617,19 @@ button {
   font-size: 0.8rem;
   font-weight: bold;
 }
+@media only screen and (max-width: 37.5em) {
+  .button_navigation-identify {
+    display: none;
+  }
+}
+.button_navigation-menu {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .button_navigation-menu {
+    display: inline;
+  }
+}
 .button_menu-collapse {
   font-size: 1rem;
   padding: 0;
@@ -652,6 +671,19 @@ button {
   border-radius: 28px;
   color: black;
   font-weight: 800;
+}
+.button_filter {
+  visibility: hidden;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #f7a530;
+  cursor: pointer;
+}
+@media only screen and (max-width: 48em) {
+  .button_filter {
+    visibility: visible;
+  }
 }
 
 .sidebar {
@@ -731,13 +763,18 @@ button {
   margin-left: 24px;
   margin-right: 80px;
 }
+@media only screen and (max-width: 56.25em) {
+  .maincontent {
+    margin: 40px 0px;
+  }
+}
 .maincontent_header {
   display: flex;
   justify-content: space-between;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .maincontent_header {
-    flex-direction: column;
+    justify-content: space-around;
   }
 }
 .maincontent_header span {
@@ -752,12 +789,17 @@ button {
 }
 .maincontent_header-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .maincontent_header-right form {
   font-size: 0.7rem;
   font-weight: 700;
   margin-right: 20px;
+}
+@media only screen and (max-width: 48em) {
+  .maincontent_header-right form {
+    display: none;
+  }
 }
 .maincontent_header-right form select {
   border: 1px solid #dedada;
@@ -774,13 +816,14 @@ button {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(4, min-content);
-  grid-gap: 30px;
+  grid-gap: 15px;
   justify-content: space-between;
   margin-top: 20px;
 }
 @media only screen and (max-width: 75em) {
   .maincontent_content {
     grid-template-columns: repeat(3, min-content);
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -1018,6 +1061,11 @@ button {
 .breadcrumb {
   padding: 20px 0px;
   list-style: none;
+}
+@media only screen and (max-width: 48em) {
+  .breadcrumb {
+    display: none;
+  }
 }
 .breadcrumb li {
   display: inline;

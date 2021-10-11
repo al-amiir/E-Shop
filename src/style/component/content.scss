@@ -3,12 +3,17 @@
   margin-top: 40px;
   margin-left: 24px;
   margin-right: 80px;
-
+  @include respond(tab-port) {
+    margin: 40px 0px;
+  }
   &_header {
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+      justify-content: space-around;
+    }
     @include respond(tab-port) {
-      flex-direction: column;
     }
     span {
       font-size: 1rem;
@@ -23,11 +28,14 @@
     }
     &-right {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       form {
         font-size: 0.7rem;
         font-weight: 700;
         margin-right: 20px;
+        @include respond(large-phone) {
+          display: none;
+        }
         select {
           border: 1px solid #dedada;
           background-color: transparent;
@@ -46,11 +54,12 @@
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(4, min-content);
-    grid-gap: 30px;
+    grid-gap: 15px;
     justify-content: space-between;
     margin-top: 20px;
     @include respond(tab-land) {
       grid-template-columns: repeat(3, min-content);
+      justify-content: center;
     }
     @include respond(tab-port) {
       grid-template-columns: repeat(2, min-content);

@@ -50,6 +50,7 @@ export default function MainContent(props) {
                 </select>
               </label>
             </form>
+            <span className="button_filter fa fa-filter "></span>
           </div>
         </div>
         <div className="maincontent_content">
@@ -60,9 +61,7 @@ export default function MainContent(props) {
               </Link>
             ))
           ) : (
-            <p className="text-error">
-              Sorry We Don't Have What you Searched For !.
-            </p>
+            <p className="text-error">Sorry Not Found!.</p>
           )}
         </div>
         {products.length > 0 ? <Pagination /> : ""}
