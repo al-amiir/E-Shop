@@ -12,7 +12,6 @@ export const filterSlice = createSlice({
   reducers: {
     filter: (state, recived) => {
       state.dataArray = filterDataFunc(recived.payload, TEST_DATA);
-      console.log(state.dataArray);
     },
     sort: (state, recived) => {
       state.dataArray = sortingFunc(state.dataArray, recived.payload);

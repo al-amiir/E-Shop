@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { filter } from "../../features/filter/filterSlice";
 
@@ -34,31 +34,38 @@ export default function SideBar(props) {
       "Dress Shirts": false,
     },
     productNeedsByClient: [],
-    range: 50,
   };
+  let [range, setRange] = useState(50);
+  // range: 50,
   let finalArraySent;
   const dispatch = useDispatch();
 
   function handleRange(event) {
-    state.range = event.target.value;
+    setRange(+event.target.value);
+    // state.range = event.target.value;
   }
 
   function handleProductChange(event, type) {
     let value = event.target.value;
     let productChecked = state[`${type}Checked`];
     let productNeedsByClient = state[`${type}NeedsByClient`];
+
     productChecked[value] = !productChecked[value];
+
     if (productChecked[value]) {
       productNeedsByClient.push(value);
+      event.target.style.boxShadow = " 0px 0px 8px 0px black";
     } else {
       productNeedsByClient.splice(productNeedsByClient.indexOf(value), 1);
+      event.target.style.boxShadow = " 0px 0px white";
     }
     finalArraySent = [
       state.productNeedsByClient,
-      state.range,
+      range,
       state.sizeNeedsByClient,
       state.colorNeedsByClient,
     ];
+
     dispatch(filter(finalArraySent));
   }
 
@@ -96,7 +103,7 @@ export default function SideBar(props) {
           </div>
           <div className="sidebar_range-text">
             <span>0 USD</span>
-            <span>{state.range} USD</span>
+            <span>{range} USD</span>
           </div>
           <input
             type="range"
@@ -104,6 +111,7 @@ export default function SideBar(props) {
             name="vol"
             min="0"
             max="500"
+            value={range}
             onChange={handleRange}
           />
         </form>

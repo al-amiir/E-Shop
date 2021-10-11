@@ -16,7 +16,6 @@ export default function MainContent(props) {
     dispatch(sort(sortValue));
   }
   let products = useSelector((state) => state.filter.dataArray);
-  console.log(products);
   return (
     <>
       <div className="maincontent">

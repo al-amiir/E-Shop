@@ -30,6 +30,7 @@
         color: #3a3a3a;
         cursor: pointer;
         padding: 9px;
+        transition: 0.2s ease;
       }
     }
     &-color {
@@ -38,9 +39,11 @@
         border: 1px solid #dedada;
         padding: 5px;
         input {
+          cursor: pointer;
           border: 1px solid #dedada;
           width: 20px;
           color: transparent;
+          transition: 0.3s ease;
         }
       }
     }
