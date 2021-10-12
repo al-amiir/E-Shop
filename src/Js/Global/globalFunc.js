@@ -113,3 +113,21 @@ export function collapseHeight(target, small, big) {
     });
   }
 }
+export function sliding(target, from, to) {
+  anime({
+    targets: `${target}`,
+    translateX: [`${from}`, `${to}`],
+    easing: "easeOutSine",
+    duration: 500,
+  });
+}
+
+export function overraySliding(direction) {
+  anime({
+    targets: `.overray`,
+    translateX: ["0vw", "-100vw"],
+    duration: 500,
+    easing: "easeOutSine",
+    direction: `${direction}`,
+  });
+}

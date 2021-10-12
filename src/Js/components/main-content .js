@@ -4,16 +4,21 @@ import Card from "../subComponent/card";
 import Pagination from "../subComponent/pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { sort } from "../../features/filter/filterSlice";
+import { overraySliding, sliding } from "../Global/globalFunc";
 
 export default function MainContent(props) {
   const [sortValue, setSortValue] = useState("-select-");
   const dispatch = useDispatch();
-
+  let sidebarSliding = false;
   function handleSelect(event) {
     setSortValue(event.target.value);
   }
   function handleDispatch() {
     dispatch(sort(sortValue));
+  }
+  function handlesidebarSliding(event) {
+    sliding(".sidebar", "0px", "270px");
+    overraySliding("reverse");
   }
   let products = useSelector((state) => state.filter.dataArray);
   return (
@@ -50,7 +55,10 @@ export default function MainContent(props) {
                 </select>
               </label>
             </form>
-            <span className="button_filter fa fa-filter "></span>
+            <span
+              onClick={handlesidebarSliding}
+              className="button_filter fa fa-filter "
+            ></span>
           </div>
         </div>
         <div className="maincontent_content">

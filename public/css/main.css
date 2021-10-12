@@ -689,12 +689,14 @@ button {
 .sidebar {
   margin-left: 50px;
   margin-top: 50px;
+  z-index: 3;
 }
 @media only screen and (max-width: 48em) {
   .sidebar {
     position: fixed;
     left: -240px;
     margin: 0;
+    margin-top: 40px;
   }
 }
 .sidebar_header {
@@ -704,6 +706,7 @@ button {
   align-items: center;
 }
 .sidebar_component {
+  background-color: white;
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -713,13 +716,14 @@ button {
   margin-bottom: 10px;
   overflow: hidden;
   height: 82px;
+  background-color: white;
 }
 .sidebar_component-1 {
   height: 160px;
 }
 .sidebar_component-size {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   margin-right: 6px;
 }
 .sidebar_component-size input {
@@ -1159,6 +1163,17 @@ button {
   border-radius: 4px;
   color: black;
   font-weight: 700;
+}
+
+.overray {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  background-color: #000000bf;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

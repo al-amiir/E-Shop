@@ -1,0 +1,10 @@
+.overray {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  background-color: #000000bf;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+  cursor: pointer;
+}

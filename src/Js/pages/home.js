@@ -4,11 +4,13 @@ import Header from "../components/header";
 import SideBar from "../components/side-bar";
 import MainContent from "../components/main-content ";
 import Footer from "../components/footer";
+import OverRay from "../subComponent/overRay";
 
 export class Home extends React.Component {
   render() {
     return (
       <>
+        <OverRay />
         <Header />
         <div style={{ marginLeft: "3rem" }}>
           <ul className="breadcrumb">
@@ -22,7 +24,7 @@ export class Home extends React.Component {
         </div>
         <div style={{ display: "flex" }}>
           <SideBar />
-          <MainContent />
+          <MainContent sidebarSliding={this.handleSliding} />
         </div>
         <Footer />
       </>

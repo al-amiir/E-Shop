@@ -91,7 +91,7 @@ export default class SingleProduct extends React.Component {
             </div>
             <div className="color">
               <p>Color:</p>
-              <div className="sidebar_box-color">
+              <div className="sidebar_component-color">
                 {this.state.product.color.map((color, i) => {
                   return (
                     <div key={i}>
@@ -107,7 +107,7 @@ export default class SingleProduct extends React.Component {
             </div>
             <div>
               <p>Size</p>
-              <div className="sidebar_box-size">
+              <div className="sidebar_component-size">
                 {this.state.product.size.map((size, i) => {
                   return <input type="button" key={i} value={size} />;
                 })}

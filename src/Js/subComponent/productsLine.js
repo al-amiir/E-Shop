@@ -15,7 +15,7 @@ export default class ProductsLine extends React.Component {
             <span className="material-icons">arrow_back</span>
           </button>
           {TEST_DATA.slice(0, 3).map((p) => (
-            <Link to={`${p.id}`} key={p.id}>
+            <Link to={`/${p.id}`} key={p.id}>
               <Card data={p} key={p.id} />
             </Link>
           ))}
