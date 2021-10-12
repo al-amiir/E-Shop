@@ -2,7 +2,9 @@
   margin-left: 50px;
   margin-top: 50px;
   @include respond(large-phone) {
-    display: none;
+    position: fixed;
+    left: -240px;
+    margin: 0;
   }
   &_header {
     font-weight: 700;
@@ -10,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  &_box {
+  &_component {
     font-size: 0.7rem;
     display: flex;
     flex-direction: column;
@@ -18,6 +20,12 @@
     width: 240px;
     padding: 10px 10px 10px 30px;
     margin-bottom: 10px;
+    overflow: hidden;
+    height: 82px;
+
+    &-1 {
+      height: 160px;
+    }
     &-size {
       display: flex;
       justify-content: space-between;
@@ -48,6 +56,7 @@
       }
     }
   }
+
   &_product {
     & label {
       input {

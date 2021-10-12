@@ -1,3 +1,5 @@
+import anime from "animejs/lib/anime.es.js";
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter Data Function
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,4 +90,26 @@ export function sortingFunc(array, type) {
   }
 
   return array;
+}
+
+export function collapseHeight(target, small, big) {
+  let docTraget = document.querySelector(`.${target}`).style.height;
+  if (docTraget === "" || docTraget === `${big}`) {
+    anime({
+      targets: `.${target}`,
+      height: [`${big}`, `${small}`],
+      direction: "normal",
+      easing: "easeOutCubic",
+      duration: 200,
+    });
+  } else if (docTraget === `${small}`) {
+    anime({
+      targets: `.${target}`,
+      height: [`${small}`, `${big}`],
+      direction: "normal",
+      easing: "easeOutCubic",
+
+      duration: 200,
+    });
+  }
 }

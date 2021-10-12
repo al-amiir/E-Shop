@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { filter } from "../../features/filter/filterSlice";
-
+import { collapseHeight } from "../Global/globalFunc";
 export default function SideBar(props) {
   let state = {
     sizeType: ["xs", "s", "m", "l", "xl", "xxl"],
@@ -69,14 +69,35 @@ export default function SideBar(props) {
     dispatch(filter(finalArraySent));
   }
 
+  function handleFormDisplay(event) {
+    event.preventDefault();
+    let targetForm = event.target.closest("form").classList[1];
+    if (
+      event.target.style.transform === "" ||
+      event.target.style.transform === "rotateZ(0deg)"
+    ) {
+      event.target.style.transform = "rotateZ(180deg)";
+    } else {
+      event.target.style.transform = "rotateZ(0deg)";
+    }
+    if (targetForm === "sidebar_component-1") {
+      collapseHeight(targetForm, "40px", "160px");
+    } else {
+      collapseHeight(targetForm, "40px", "83px");
+    }
+    console.log(event.target.style.transform);
+  }
   return (
     <>
       <div className="sidebar">
         {/* Product Form  */}
-        <form className="sidebar_box sidebar_product">
+        <form className=" sidebar_component sidebar_component-1  sidebar_product">
           <div className="sidebar_header">
             <span>Product Type</span>
-            <button className="button_menu-collapse">
+            <button
+              onClick={handleFormDisplay}
+              className="button_menu-collapse"
+            >
               <span className="material-icons">expand_less</span>
             </button>
           </div>
@@ -94,10 +115,13 @@ export default function SideBar(props) {
           })}
         </form>
         {/* Range Form */}
-        <form className="sidebar_box sidebar_range">
+        <form className="sidebar_component sidebar_component-2 sidebar_range">
           <div className="sidebar_header">
             <span>Price</span>
-            <button className="button_menu-collapse">
+            <button
+              onClick={handleFormDisplay}
+              className="button_menu-collapse"
+            >
               <span className="material-icons">expand_less</span>
             </button>
           </div>
@@ -116,14 +140,17 @@ export default function SideBar(props) {
           />
         </form>
         {/* Size Form  */}
-        <form className="sidebar_box ">
+        <form className="sidebar_component sidebar_component-3 ">
           <div className="sidebar_header">
             <span>Size</span>
-            <button className="button_menu-collapse">
+            <button
+              onClick={handleFormDisplay}
+              className="button_menu-collapse"
+            >
               <span className="material-icons">expand_less</span>
             </button>
           </div>
-          <div className="sidebar_box-size">
+          <div className="sidebar_component-size">
             {state.sizeType.map((size, i) => {
               return (
                 <input
@@ -137,14 +164,17 @@ export default function SideBar(props) {
           </div>
         </form>
         {/* Color Form */}
-        <form className="sidebar_box ">
+        <form className="sidebar_component sidebar_component-4">
           <div className="sidebar_header">
             <span>Color</span>
-            <button className="button_menu-collapse">
+            <button
+              onClick={handleFormDisplay}
+              className="button_menu-collapse"
+            >
               <span className="material-icons">expand_less</span>
             </button>
           </div>
-          <div className="sidebar_box-color">
+          <div className="sidebar_component-color">
             {state.color.map((color, i) => {
               return (
                 <div key={i}>

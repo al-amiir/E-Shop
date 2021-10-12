@@ -692,7 +692,9 @@ button {
 }
 @media only screen and (max-width: 48em) {
   .sidebar {
-    display: none;
+    position: fixed;
+    left: -240px;
+    margin: 0;
   }
 }
 .sidebar_header {
@@ -701,7 +703,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.sidebar_box {
+.sidebar_component {
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -709,13 +711,18 @@ button {
   width: 240px;
   padding: 10px 10px 10px 30px;
   margin-bottom: 10px;
+  overflow: hidden;
+  height: 82px;
 }
-.sidebar_box-size {
+.sidebar_component-1 {
+  height: 160px;
+}
+.sidebar_component-size {
   display: flex;
   justify-content: space-between;
   margin-right: 6px;
 }
-.sidebar_box-size input {
+.sidebar_component-size input {
   background-color: transparent;
   border: 1px solid #dedada;
   font-size: 0.7rem;
@@ -725,14 +732,14 @@ button {
   padding: 9px;
   transition: 0.2s ease;
 }
-.sidebar_box-color {
+.sidebar_component-color {
   display: flex;
 }
-.sidebar_box-color div {
+.sidebar_component-color div {
   border: 1px solid #dedada;
   padding: 5px;
 }
-.sidebar_box-color div input {
+.sidebar_component-color div input {
   cursor: pointer;
   border: 1px solid #dedada;
   width: 20px;
@@ -893,6 +900,7 @@ button {
   font-size: 0.8rem;
   font-weight: 200;
   margin: 7px 0px;
+  color: black;
 }
 .card .sale {
   color: red;
