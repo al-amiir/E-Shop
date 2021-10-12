@@ -1,7 +1,7 @@
 import React from "react";
-import Description from "./description";
-import ProductsLine from "./productsLine";
-import MyGallery from "./gallery";
+import Description from "../subComponent/description";
+import ProductsLine from "../subComponent/productsLine";
+import MyGallery from "../subComponent/gallery";
 import TEST_DATE from "../../TEST_DATA";
 import { Link } from "react-router-dom";
 import Footer from "./footer";

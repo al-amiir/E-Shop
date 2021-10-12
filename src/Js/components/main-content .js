@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "./card";
-import Pagination from "./pagination";
+import Card from "../subComponent/card";
+import Pagination from "../subComponent/pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { sort } from "../../features/filter/filterSlice";
 
@@ -56,7 +56,7 @@ export default function MainContent(props) {
         <div className="maincontent_content">
           {products.length > 0 ? (
             products.map((c) => (
-              <Link to={`${c.id}`} key={c.id}>
+              <Link to={`/${c.id}`} key={c.id}>
                 <Card data={c} key={c.id} />
               </Link>
             ))
