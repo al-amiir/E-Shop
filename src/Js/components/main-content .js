@@ -9,7 +9,7 @@ import { overraySliding, sliding } from "../Global/globalFunc";
 export default function MainContent(props) {
   const [sortValue, setSortValue] = useState("-select-");
   const dispatch = useDispatch();
-  let sidebarSliding = false;
+
   function handleSelect(event) {
     setSortValue(event.target.value);
   }
@@ -18,7 +18,7 @@ export default function MainContent(props) {
   }
   function handlesidebarSliding(event) {
     sliding(".sidebar", "0px", "270px");
-    overraySliding("reverse");
+    overraySliding("0", "100vw");
   }
   let products = useSelector((state) => state.filter.dataArray);
   return (

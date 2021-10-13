@@ -122,12 +122,11 @@ export function sliding(target, from, to) {
   });
 }
 
-export function overraySliding(direction) {
+export function overraySliding(from, to) {
   anime({
     targets: `.overray`,
-    translateX: ["0vw", "-100vw"],
+    translateX: [`${from}`, `${to}`],
     duration: 500,
     easing: "easeOutSine",
-    direction: `${direction}`,
   });
 }
