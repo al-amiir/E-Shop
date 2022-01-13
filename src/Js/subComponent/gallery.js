@@ -7,21 +7,13 @@ export default class MyGallery extends React.Component {
     this.state = {
       images: this.props.data.thumbnail.map((img) => {
         return {
-          original: `${this.props.data.img}`,
+          original: `${img}`,
           thumbnail: `${img}`,
         };
       }),
     };
   }
   render() {
-    return (
-      <ImageGallery
-        items={this.state.images}
-        thumbnailPosition={"bottom"}
-        showPlayButton={false}
-        showNav={false}
-        showFullscreenButton={false}
-      />
-    );
+    return <ImageGallery items={this.state.images} thumbnailPosition={"bottom"} showPlayButton={false} showNav={false} showFullscreenButton={false} />;
   }
 }

@@ -15,7 +15,7 @@ export default function SideBar(props) {
     },
     sizeNeedsByClient: [],
 
-    color: ["black", "red", "wheat", "grey", "white", "blue"],
+    color: ["black", "red", "yellow", "green", "grey", "blue"],
     colorChecked: {
       black: false,
       brown: false,
@@ -59,12 +59,7 @@ export default function SideBar(props) {
       productNeedsByClient.splice(productNeedsByClient.indexOf(value), 1);
       event.target.style.boxShadow = " 0px 0px white";
     }
-    finalArraySent = [
-      state.productNeedsByClient,
-      range,
-      state.sizeNeedsByClient,
-      state.colorNeedsByClient,
-    ];
+    finalArraySent = [state.productNeedsByClient, range, state.sizeNeedsByClient, state.colorNeedsByClient];
 
     dispatch(filter(finalArraySent));
   }
@@ -72,10 +67,7 @@ export default function SideBar(props) {
   function handleFormDisplay(event) {
     event.preventDefault();
     let targetForm = event.target.closest("form").classList[1];
-    if (
-      event.target.style.transform === "" ||
-      event.target.style.transform === "rotateZ(0deg)"
-    ) {
+    if (event.target.style.transform === "" || event.target.style.transform === "rotateZ(0deg)") {
       event.target.style.transform = "rotateZ(180deg)";
     } else {
       event.target.style.transform = "rotateZ(0deg)";
@@ -94,21 +86,14 @@ export default function SideBar(props) {
         <form className=" sidebar_component sidebar_component-1  sidebar_product">
           <div className="sidebar_header">
             <span>Product Type</span>
-            <button
-              onClick={handleFormDisplay}
-              className="button_menu-collapse"
-            >
+            <button onClick={handleFormDisplay} className="button_menu-collapse">
               <span className="material-icons">expand_less</span>
             </button>
           </div>
           {state.productType.map((product, i) => {
             return (
               <label key={i}>
-                <input
-                  value={product}
-                  type="checkbox"
-                  onChange={(e) => handleProductChange(e, "product")}
-                />
+                <input value={product} type="checkbox" onChange={(e) => handleProductChange(e, "product")} />
                 <span>{product}</span>
               </label>
             );
@@ -118,10 +103,7 @@ export default function SideBar(props) {
         <form className="sidebar_component sidebar_component-2 sidebar_range">
           <div className="sidebar_header">
             <span>Price</span>
-            <button
-              onClick={handleFormDisplay}
-              className="button_menu-collapse"
-            >
+            <button onClick={handleFormDisplay} className="button_menu-collapse">
               <span className="material-icons">expand_less</span>
             </button>
           </div>
@@ -129,37 +111,19 @@ export default function SideBar(props) {
             <span>0 USD</span>
             <span>{range} USD</span>
           </div>
-          <input
-            type="range"
-            id="vol"
-            name="vol"
-            min="0"
-            max="500"
-            value={range}
-            onChange={handleRange}
-          />
+          <input type="range" id="vol" name="vol" min="0" max="500" value={range} onChange={handleRange} />
         </form>
         {/* Size Form  */}
         <form className="sidebar_component sidebar_component-3 ">
           <div className="sidebar_header">
             <span>Size</span>
-            <button
-              onClick={handleFormDisplay}
-              className="button_menu-collapse"
-            >
+            <button onClick={handleFormDisplay} className="button_menu-collapse">
               <span className="material-icons">expand_less</span>
             </button>
           </div>
           <div className="sidebar_component-size">
             {state.sizeType.map((size, i) => {
-              return (
-                <input
-                  key={i}
-                  type="button"
-                  value={size}
-                  onClick={(e) => handleProductChange(e, "size")}
-                />
-              );
+              return <input key={i} type="button" value={size} onClick={(e) => handleProductChange(e, "size")} />;
             })}
           </div>
         </form>
@@ -167,10 +131,7 @@ export default function SideBar(props) {
         <form className="sidebar_component sidebar_component-4">
           <div className="sidebar_header">
             <span>Color</span>
-            <button
-              onClick={handleFormDisplay}
-              className="button_menu-collapse"
-            >
+            <button onClick={handleFormDisplay} className="button_menu-collapse">
               <span className="material-icons">expand_less</span>
             </button>
           </div>
@@ -178,12 +139,7 @@ export default function SideBar(props) {
             {state.color.map((color, i) => {
               return (
                 <div key={i}>
-                  <input
-                    style={{ backgroundColor: color }}
-                    type="button"
-                    value={color}
-                    onClick={(e) => handleProductChange(e, "color")}
-                  />
+                  <input style={{ backgroundColor: color }} type="button" value={color} onClick={(e) => handleProductChange(e, "color")} />
                 </div>
               );
             })}

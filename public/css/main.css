@@ -419,6 +419,7 @@
 
 body {
   box-sizing: border-box;
+  background-color: #867500;
 }
 
 li {
@@ -645,6 +646,7 @@ button {
   font-size: 0.8rem;
 }
 .button_love {
+  display: none;
   background-color: white;
   border: 1px solid grey;
   border-radius: 20px;
@@ -706,7 +708,6 @@ button {
   align-items: center;
 }
 .sidebar_component {
-  background-color: white;
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -716,7 +717,8 @@ button {
   margin-bottom: 10px;
   overflow: hidden;
   height: 82px;
-  background-color: white;
+  background-color: #3800008c;
+  color: white;
 }
 .sidebar_component-1 {
   height: 160px;
@@ -731,10 +733,11 @@ button {
   border: 1px solid #dedada;
   font-size: 0.7rem;
   height: 31px;
-  color: #3a3a3a;
+  color: white;
   cursor: pointer;
   padding: 9px;
   transition: 0.2s ease;
+  font-weight: 800;
 }
 .sidebar_component-color {
   display: flex;
@@ -826,7 +829,7 @@ button {
 .maincontent_content {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(4, min-content);
+  grid-template-columns: repeat(5, min-content);
   grid-gap: 15px;
   justify-content: space-between;
   margin-top: 20px;
@@ -856,6 +859,10 @@ button {
 .card {
   position: relative;
   font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card .button_love {
   position: absolute;
@@ -863,41 +870,42 @@ button {
   right: 15px;
 }
 .card img {
-  width: 200px;
   height: 200px;
   cursor: pointer;
   transition: 0.2s ease;
+  border: 4px solid wheat;
 }
 .card img:hover {
   box-shadow: 0px 4px 10px black;
 }
 @media only screen and (max-width: 75em) {
   .card img {
-    width: 170px;
+    width: auto;
     height: 170px;
   }
 }
 @media only screen and (max-width: 56.25em) {
   .card img {
-    width: 200px;
+    width: auto;
     height: 200px;
   }
 }
 @media only screen and (max-width: 48em) {
   .card img {
-    width: 160px;
+    width: auto;
     height: 160px;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .card img {
-    width: 200px;
+    width: auto;
     height: 200px;
   }
 }
 @media only screen and (max-width: 28em) {
   .card img {
-    width: 150px;
+    width: auto;
+    height: 150px;
   }
 }
 .card p {

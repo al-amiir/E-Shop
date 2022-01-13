@@ -15,8 +15,6 @@
     align-items: center;
   }
   &_component {
-    background-color: white;
-
     font-size: 0.7rem;
     display: flex;
     flex-direction: column;
@@ -26,7 +24,8 @@
     margin-bottom: 10px;
     overflow: hidden;
     height: 82px;
-    background-color: white;
+    background-color: #3800008c;
+    color: white;
     &-1 {
       height: 160px;
     }
@@ -39,10 +38,11 @@
         border: 1px solid #dedada;
         font-size: 0.7rem;
         height: 31px;
-        color: #3a3a3a;
+        color: white;
         cursor: pointer;
         padding: 9px;
         transition: 0.2s ease;
+        font-weight: 800;
       }
     }
     &-color {
